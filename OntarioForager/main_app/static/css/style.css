@@ -1,0 +1,36 @@
+body {
+  font-family: 'Cantora One', sans-serif;
+  color: white;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-image: url('../images/conifer.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+  
+main {
+  flex: 1 0 auto;
+}
+ 
+footer.page-footer {
+  padding-top: 0;
+  text-align: right;
+}
+
+.nav-wrapper, .left, .right, .page-footer {
+  background-image: url('../images/leaves3.jpg');
+} 
+
+.headline {
+  font-size: 100px;
+}
+
+.info {
+  font-size: 40px;
+}
+
+#size {
+  font-size: 40px;
+}
