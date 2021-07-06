@@ -10,10 +10,19 @@
     {% extends 'base.html' %}
     {% block content %}
 
-This is my HOME CONTENT 
+    <h1>Plants</h1>
+    
+    <div class="card hoverable">
+        <a href="/plant/{{ plant.id }}">
+        <div class="card-content">
+        <span class="card-title">Trees</span>
+        <p>Trees</p>
+        </div>
+        </a>
+    </div>
 
 
-    {% endblock %}
+  {% endblock %}
 
 </body>
 </html>

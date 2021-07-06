@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% extends 'base.html' %}
+    {% block content %}
+
+    <div class="card">
+        <!-- add this single line below -->
+        <a href="/plant/{{ plant.id }}">
+          <div class="card-content">
+            <span class="card-title">{{ plant.name }}</span>
+            <p>Location: {{ plant.location }}</p>
+            <p>Description: {{ plant.description }}</p>
+            <p>Culinary Use: {{ plant.culinary_use }}</p>
+            <p>Medicinal Use: {{ plant.medicinal_use }}</p>
+            <p>Harvest Season: {{ plant.harvest_season }}</p>
+            <p>Cautions: {{ plant.cautions }}</p>
+           
+          </div>
+        <!-- and this following one as well -->
+        </a>
+      </div>
+      
+ 
+
+    {% endblock %}
+
+    </body>
+</html>
