@@ -1,26 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
     {% extends 'base.html' %}
     {% block content %}
 
-    <h1>Plants</h1>
-    
-    <div class="card hoverable">
-        <a href="/plant/{{ plant.id }}">
+    <h3 id="category">Choose your category:</h3>
+    <img class="underline" src="../static/images/leavessmall.png">
+    <div id='width'>
+    <div id='home' class="card hoverable">
+        <a href="/plant/Tree/">
         <div class="card-content">
         <span class="card-title">Trees</span>
-        <p>Trees</p>
         </div>
         </a>
     </div>
-
+    <div class="card hoverable">
+        <a href="/plant/Flowers/">
+        <div class="card-content">
+        <span class="card-title">Flowers</span>
+        </div>
+        </a>
+    </div>
+    <div class="card hoverable">
+        <a href="/plant/Berries/">
+        <div class="card-content">
+        <span class="card-title">Berries</span>
+        </div>
+        </a>
+    </div>
+    <div class="card hoverable">
+        <a href="/plant/Grasses/">
+        <div class="card-content">
+        <span class="card-title">Grasses</span>
+        </div>
+        </a>
+    </div>
+    <div class="card hoverable">
+        <a href="/plant/Fungi/">
+        <div class="card-content">
+        <span class="card-title">Fungi</span>
+        </div>
+        </a>
+    </div>
+    </div>
 
   {% endblock %}
 

@@ -1,35 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Ontario Forager</title>
-</head>
-<body>
-    
+   
  
     {% extends 'base.html' %}
     {% block content %}
   
-    <h1>Plants</h1>
+    <h1 id="index-title">Plants</h1>
+    <img class="underlineindex" src="../static/images/leavessmall.png">
     {% for plant in plants %}
 
-  <div class="card hoverable">
-    <a href="/plant/{{ plant.id }}">
-      <div class="card-content">
-        <span class="card-title">{{ plant.name }}</span>
-        <p>Location: {{ plant.location }}</p>
-        <p>Description: {{ plant.description }}</p>
-        <p>Harvest Season: {{ plant.harvest_season }}</p>
-       
+    <div class="card">
+      <a href="/plant/{{ plant.id }}"></a>
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="">
       </div>
-    </a>
-  </div>
+      <div id="front" class="card-content">
+        <span id="title" class="card-title activator grey-text text-darken-4">{{ plant.name }}</span>
+        <hr/>
+        <p><b>Location:</b> {{ plant.location }}</p>
+        <br/>
+        <p><b>Description:</b> {{ plant.description }}</p>
+        <br/>
+        <p><b>Harvest Season:</b> {{ plant.harvest_season }}</p>
+      </div>
+      <div id="info" class="card-reveal">
+        <span id="title" class="card-title grey-text text-darken-4">{{ plant.name }}</span>
+        <hr class="linerule"/>
+        <p><b>Culinary Use:</b> {{ plant.culinary_use }}</p>
+        <br/>
+        <p><b>Medicinal Use:</b> {{ plant.medicinal_use }}</p>
+        <br/>
+        <p><b>Cautions:</b> {{ plant.cautions }}</p>
+      </div>
+    </div>
 
   {% endfor %}
-
-
 
 
     {% endblock %}
