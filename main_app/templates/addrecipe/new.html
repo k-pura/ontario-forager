@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Add A Recipe</h1> 
+
+    <form method="POST" action="/recipe_add" autocomplete="off">
+        {% csrf_token %}
+        Recipe Name: <input name="name">
+        How Many Servings: <input name="servings">
+        Prep Time: <input name="preptime">
+        Cook Time: <input name="cooktime">
+        Ingredients: <input name="ingredients">
+        Directions: <input name="directions">
+
+        <button type="submit">Add Recipe</button>    
+    </form>
+</div>
+
+{% endblock %}
+

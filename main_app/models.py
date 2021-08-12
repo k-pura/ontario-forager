@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Plant(models.Model):
   name = models.CharField(max_length=100)
@@ -18,4 +19,4 @@ class Recipe(models.Model):
   cooktime = models.CharField(max_length=50)
   ingredients = models.TextField(max_length=250)
   directions = models.TextField(max_length=1000)
-  plant = models.ForeignKey(Plant, on_delete=models.CASCADE)
+  user = models.ForeignKey(User, on_delete=models.CASCADE)
